@@ -1,0 +1,153 @@
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║   ✅ SITIO WEB ACTUALIZADO - VERSIÓN FINAL                      ║
+║      Con todas las marcas y productos específicos               ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+
+🎯 CAMBIOS REALIZADOS:
+
+✅ PRODUCTOS ACTUALIZADOS:
+   • "Centros de Control (CCM)" → "Transformadores Pad-mounted"
+   • "Sistemas de Control" → "Calidad de Energía"
+     - Bancos de capacitores
+     - Supresores de transientes
+
+✅ SCHNEIDER ELECTRIC:
+   Con enlaces directos a:
+   • Centro de carga QO
+   • Interruptores termomagnéticos QO / QOB
+   • QO Breaker Dual
+   • Interruptores desconectadores para aire acondicionado QO
+   • Interruptor de seguridad pesado Square D
+
+✅ CROUSE-HINDS BY EATON:
+   Con 10 líneas de productos y enlaces:
+   • Industrial Fittings
+   • Cable Glands
+   • Commercial Products
+   • Power Distribution and Control (C&A)
+   • Enclosures
+   • Lighting
+   • Plugs & Receptacles
+   • Hazardous Area Communications
+   • Process Instrumentation & Protection (MTL)
+   • Airfield Lighting and Control Systems
+
+✅ EDP UPS:
+   • Enlace a carpeta de catálogos
+
+✅ EATON:
+   • Transformadores Pad-mounted (enlace a PDF)
+   • Sistemas UPS
+
+✅ IMAGEN ACTUALIZADA:
+   • Nueva imagen en sección "Nosotros" de ingenieros 
+     trabajando en tableros eléctricos
+
+✅ SECCIONES EXPANDIBLES:
+   • Cada marca ahora tiene productos desplegables
+   • Click para ver todos los productos
+
+═══════════════════════════════════════════════════════════════════
+
+📦 ESTRUCTURA DE ARCHIVOS:
+
+cps-actualizado/
+├── index.html                          ← Página web principal
+├── images/                             ← LOGOS AQUÍ
+│   ├── logo.jpg                       ← Tu logo CPS
+│   ├── Logo_Schneider.png             ← Logo Schneider
+│   ├── Logo_CrouseHinds.png           ← Logo Crouse-Hinds
+│   ├── Logo_EDP.png                   ← Logo EDP
+│   ├── Logo_Eaton.png                 ← Logo Eaton
+│   └── README.txt                     ← Instrucciones
+└── Catalogos/                          ← CATÁLOGOS PDF AQUÍ
+    ├── Transformadores Pad-mounted.pdf
+    └── README.txt                     ← Instrucciones
+
+═══════════════════════════════════════════════════════════════════
+
+📋 PASOS PARA SUBIR A HOSTINGER:
+
+1️⃣ PREPARAR ARCHIVOS EN TU PC:
+   
+   a) Descarga la carpeta "cps-actualizado"
+   
+   b) Copia tus archivos a las carpetas correctas:
+      
+      En la carpeta "images/":
+      □ Logo_Schneider.png (ya lo tienes)
+      □ Logo_CrouseHinds.png (ya lo tienes)
+      □ Logo_EDP.png (ya lo tienes)
+      □ Logo_Eaton.png (ya lo tienes)
+      □ logo.jpg (tu Logo CPS.jpg renombrado)
+      
+      En la carpeta "Catalogos/":
+      □ Transformadores Pad-mounted.pdf (ya lo tienes)
+
+2️⃣ SUBIR A HOSTINGER:
+   
+   a) Entra a tu panel de Hostinger
+   
+   b) Abre "Administrador de Archivos"
+   
+   c) Ve a la carpeta "public_html"
+   
+   d) ELIMINA el index.html anterior (si existe)
+   
+   e) Sube el nuevo index.html
+   
+   f) Sube las carpetas completas:
+      - images/ (con todos los logos)
+      - Catalogos/ (con el PDF)
+
+3️⃣ VERIFICAR:
+   
+   a) Abre tu sitio: centralpowersolutions.com
+   
+   b) Verifica que:
+      □ Logo principal se vea grande
+      □ Todos los logos de marcas se vean
+      □ Los productos se expandan al hacer click
+      □ Los enlaces funcionen
+      □ El formulario funcione
+
+═══════════════════════════════════════════════════════════════════
+
+🎨 CARACTERÍSTICAS DEL NUEVO SITIO:
+
+✅ Secciones expandibles para cada marca
+✅ Enlaces directos a productos de Schneider
+✅ 10 líneas de productos Crouse-Hinds
+✅ Enlaces a catálogos PDF
+✅ Logos de todas las marcas
+✅ Formulario mejorado con productos específicos
+✅ Diseño profesional B2B
+✅ 100% responsive (móvil y desktop)
+
+═══════════════════════════════════════════════════════════════════
+
+📝 PERSONALIZACIÓN PENDIENTE:
+
+Antes de lanzar oficialmente, edita en el HTML:
+
+Línea 638: +507 XXXX-XXXX (tu teléfono)
+Línea 644: info@centralpowersolutions.com (tu email)
+Línea 668: +507 XXXX-XXXX (tu teléfono)
+
+═══════════════════════════════════════════════════════════════════
+
+💡 NOTAS IMPORTANTES:
+
+• Los nombres de archivos deben ser EXACTOS (mayúsculas/minúsculas)
+• Los logos deben estar en formato PNG o JPG
+• Los catálogos deben estar en formato PDF
+• Si falta algún archivo, el sitio seguirá funcionando pero
+  sin mostrar ese logo o catálogo específico
+
+═══════════════════════════════════════════════════════════════════
+
+🚀 ¡Tu sitio está listo para impresionar a tus clientes!
+
+¿Necesitas ayuda con algo? ¡Avísame!

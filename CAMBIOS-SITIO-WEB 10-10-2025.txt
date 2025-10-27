@@ -1,0 +1,54 @@
+CAMBIOS PARA EL SITIO WEB - Central Power Solutions
+====================================================
+
+CAMBIO 1: [Incluir selector de inles a español]
+- ¿Qué cambiar?: Agregar los iconos o botones para cambiar el idioma
+- ¿Dónde está?: en header
+- ¿Qué resultado quiero?: que se vea la opción de cambio de idioma
+- Archivos necesarios (si aplica):no necesita
+
+CAMBIO 2: [Opción de pagian en ingles]
+- ¿Qué cambiar?:toda la pagian a ingles cuando se pida
+- ¿Dónde está?: todas las secciones
+- ¿Qué resultado quiero?: misma pagian pero en ingles
+- Archivos necesarios (si aplica): Los mismos que en español
+
+CAMBIO 3: [cambir logo de EDP]
+- ¿Qué cambiar?: cambiar el logo de EDP por este: "E:\DATA_EMPRESAS\CENTRAL POWER SOLUTIONS\MARKETING\CentralPowerSolutions-WEB-FINAL\cps-actualizado\images\logo-v.webp"
+- ¿Dónde está?: Sección Marcas
+- ¿Qué resultado quiero?: usar logo correcto dado por proveedor
+- Archivos necesarios (si aplica): dejar los que están
+
+CAMBIO 4: [analizar pagiana del provedor https://www.edpsys.net/ ]
+- ¿Qué cambiar?: sección de UPS solo agregar los productos de EPD
+- ¿Dónde está?: Sección Marcas
+- ¿Qué resultado quiero?: que en mi pagian este la misma información sobre los productos de EDP como la del proveedor, pero que tenga mis datos
+- Archivos necesarios (si aplica): se puede usar este de referencia "E:\DATA_EMPRESAS\CENTRAL POWER SOLUTIONS\MARKETING\CentralPowerSolutions-WEB-FINAL\cps-actualizado\Catalogos\BROCHURE EDP 1-3kVA ESPAÑOL PARA IMPRIMIR.pdf"
+
+CAMBIO 5: [Agregar logo Siemens]
+- ¿Qué cambiar?: cambiar el logo de EDP por este: "E:\DATA_EMPRESAS\CENTRAL POWER SOLUTIONS\MARKETING\CentralPowerSolutions-WEB-FINAL\cps-actualizado\images\Logo_Siemens.png"
+- ¿Dónde está?: Sección Marcas
+- ¿Qué resultado quiero?: usar logo correcto dado por proveedor
+- Archivos necesarios (si aplica): dejar los que estan
+
+CAMBIO 6: [Agregar productos en Marca Siemens]
+- ¿Qué cambiar?: Agregar linea de Capacitorese para Corrección de Factor de Pontencia
+- ¿Dónde está?: Sección Marcas
+- ¿Qué resultado quiero?: Agregar Linea de producto en marca siemens
+- Archivos necesarios (si aplica): "E:\DATA_EMPRESAS\CENTRAL POWER SOLUTIONS\MARKETING\CentralPowerSolutions-WEB-FINAL\cps-actualizado\Catalogos\capacitores epcos-siemens.pdf"
+
+CAMBIO 7: [Eliminar productos en Marca Eaton]
+- ¿Qué cambiar?: Eliminar Sistemas UPS
+- ¿Dónde está?: Sección Marcas
+- ¿Qué resultado quiero?: Eliminar de Marca Eaton en linea de productos Sistemas UPS
+- Archivos necesarios (si aplica): no
+
+
+📚 Vocabulario Útil :
+Término  Qué significa 
+Header        La barra de arriba con el logo y menú
+Hero          La sección grande de arriba (donde está tu video)
+Footer        La parte de abajo con info de contacto
+Botón/Button  Los rectángulos naranjas que dicen "Solicitar Cotización"
+Formulario    Donde el cliente pone nombre, email, mensaje
+Sección       Cada bloque grande (Productos, Marcas, Nosotros, etc.)

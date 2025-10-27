@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Central Power Solutions S.A - Distribuidores de material eléctrico industrial. Schneider Electric, Siemens, Crouse-Hinds by Eaton, UPS EDP, transformadores, calidad de energía">
+    <meta name="keywords" content="material eléctrico, Schneider Electric, Crouse-Hinds, Eaton, UPS EDP, transformadores pad-mounted, bancos de capacitores, distribuidores, Panamá">
+    <title>Central Power Solutions S.A - Distribuidores de Material Eléctrico Industrial</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        h1, h2, h3, h4, .font-montserrat {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .bg-brand-blue { background-color: #2D5F8A; }
+        .text-brand-blue { color: #2D5F8A; }
+        .bg-brand-orange { background-color: #F37F21; }
+        .text-brand-orange { color: #F37F21; }
+        .border-brand-orange { border-color: #F37F21; }
+        .bg-brand-gray { background-color: #808285; }
+        .text-brand-gray { color: #808285; }
+        .bg-dark-blue { background-color: #1a3a54; }
+        .hero-bg {
+            background-image: linear-gradient(rgba(45, 95, 138, 0.85), rgba(26, 58, 84, 0.9)), url('https://images.unsplash.com/photo-1565363843633-4903b74e1dfe?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .logo-container {
+            height: 70px;
+            display: flex;
+            align-items: center;
+        }
+        .logo-img {
+            max-height: 70px;
+            height: 70px;
+            width: auto;
+        }
+        @media (min-width: 768px) {
+            .logo-container {
+                height: 100px;
+            }
+            .logo-img {
+                max-height: 100px;
+                height: 100px;
+            }
+        }
+        .brand-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .brand-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(45, 95, 138, 0.3);
+        }
+        .brand-logo-card {
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .brand-logo-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(243, 127, 33, 0.1), transparent);
+            transition: left 0.5s;
+        }
+        .brand-logo-card:hover::before {
+            left: 100%;
+        }
+        .brand-logo-img {
+            max-width: 180px;
+            max-height: 80px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+        .product-link {
+            color: #2D5F8A;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .product-link:hover {
+            color: #F37F21;
+        }
+        .collapsible-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .collapsible-content.active {
+            max-height: 2000px;
+        }
+        .hero-logo-video {
+            max-width: 400px;
+            width: 90%;
+            height: auto;
+            margin: 0 auto 2rem;
+            filter: drop-shadow(0 10px 30px rgba(0,0,0,0.3));
+        }
+        @media (min-width: 768px) {
+            .hero-logo-video {
+                max-width: 500px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md fixed w-full top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 md:py-4 flex justify-between items-center">
+            <div class="logo-container">
+                <!-- Logo eliminado - solo video en hero -->
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#inicio" class="text-brand-blue hover:text-brand-orange transition duration-300 font-medium">Inicio</a>
+                <a href="#productos" class="text-brand-blue hover:text-brand-orange transition duration-300 font-medium">Productos</a>
+                <a href="#marcas" class="text-brand-blue hover:text-brand-orange transition duration-300 font-medium">Marcas</a>
+                <a href="#nosotros" class="text-brand-blue hover:text-brand-orange transition duration-300 font-medium">Nosotros</a>
+                <a href="#contacto" class="text-brand-blue hover:text-brand-orange transition duration-300 font-medium">Contacto</a>
+            </div>
+            <a href="#contacto" class="hidden md:block bg-brand-orange text-white font-montserrat font-semibold py-2 px-6 rounded-lg hover:bg-opacity-90 transition duration-300">Solicitar Cotización</a>
+            <div class="md:hidden">
+                <button id="mobile-menu-button">
+                    <i data-lucide="menu" class="text-brand-blue"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#inicio" class="block py-2 px-4 text-sm text-brand-blue hover:bg-gray-200">Inicio</a>
+            <a href="#productos" class="block py-2 px-4 text-sm text-brand-blue hover:bg-gray-200">Productos</a>
+            <a href="#marcas" class="block py-2 px-4 text-sm text-brand-blue hover:bg-gray-200">Marcas</a>
+            <a href="#nosotros" class="block py-2 px-4 text-sm text-brand-blue hover:bg-gray-200">Nosotros</a>
+            <a href="#contacto" class="block py-2 px-4 text-sm text-brand-blue hover:bg-gray-200">Contacto</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero-bg pt-40 md:pt-48 pb-24 text-white">
+            <div class="container mx-auto px-6 text-center">
+                <!-- Logo Animado en Video -->
+                <video class="hero-logo-video" autoplay loop muted playsinline>
+                    <source src="images/LogoCPSanimado.mp4" type="video/mp4">
+                    Tu navegador no soporta el video.
+                </video>
+                <h1 class="text-4xl md:text-6xl font-extrabold font-montserrat mb-6">Distribuidores de Material Eléctrico Industrial</h1>
+                <p class="text-xl md:text-2xl mb-4 max-w-4xl mx-auto font-medium">Las mejores marcas del mercado para tu proyecto industrial</p>
+                <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto">Schneider Electric | Crouse-Hinds by Eaton | UPS EDP | Transformadores | Calidad de Energía</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#productos" class="bg-brand-orange text-white font-montserrat font-bold py-4 px-10 rounded-lg text-lg hover:bg-opacity-90 transition duration-300 shadow-lg">Ver Catálogo</a>
+                    <a href="#contacto" class="bg-white text-brand-blue font-montserrat font-bold py-4 px-10 rounded-lg text-lg hover:bg-gray-100 transition duration-300 shadow-lg">Solicitar Cotización</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categorías de Productos -->
+        <section id="productos" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center text-brand-blue mb-3 font-montserrat">Nuestros Productos</h2>
+                <div class="w-24 h-1 bg-brand-orange mx-auto mb-4"></div>
+                <p class="text-center text-brand-gray text-lg mb-16 max-w-3xl mx-auto">Soluciones completas en material eléctrico industrial para proyectos de cualquier escala</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Producto 1 -->
+                    <div class="brand-card bg-gray-50 rounded-xl p-8 text-center shadow-lg">
+                        <div class="inline-block p-5 bg-brand-blue rounded-full mb-5">
+                            <i data-lucide="settings" class="text-white h-10 w-10"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-blue mb-4 font-montserrat">Variadores de Frecuencia</h3>
+                        <p class="text-brand-gray mb-4">Control preciso de velocidad y torque para motores eléctricos industriales. Alta eficiencia energética.</p>
+                        <div class="text-sm text-brand-blue font-semibold">Schneider Electric</div>
+                    </div>
+
+                    <!-- Producto 2 -->
+                    <div class="brand-card bg-gray-50 rounded-xl p-8 text-center shadow-lg">
+                        <div class="inline-block p-5 bg-brand-blue rounded-full mb-5">
+                            <i data-lucide="battery-charging" class="text-white h-10 w-10"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-blue mb-4 font-montserrat">Sistemas UPS</h3>
+                        <p class="text-brand-gray mb-4">Respaldo de energía ininterrumpida para protección de equipos críticos y continuidad operativa.</p>
+                        <div class="text-sm text-brand-blue font-semibold">EDP | Eaton</div>
+                    </div>
+
+                    <!-- Producto 3 - CAMBIADO -->
+                    <div class="brand-card bg-gray-50 rounded-xl p-8 text-center shadow-lg">
+                        <div class="inline-block p-5 bg-brand-blue rounded-full mb-5">
+                            <i data-lucide="zap-off" class="text-white h-10 w-10"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-blue mb-4 font-montserrat">Transformadores Pad-mounted</h3>
+                        <p class="text-brand-gray mb-4">Transformadores de distribución montados en pedestal para instalaciones exteriores e industriales.</p>
+                        <div class="text-sm text-brand-blue font-semibold">Eaton</div>
+                    </div>
+
+                    <!-- Producto 4 -->
+                    <div class="brand-card bg-gray-50 rounded-xl p-8 text-center shadow-lg">
+                        <div class="inline-block p-5 bg-brand-blue rounded-full mb-5">
+                            <i data-lucide="box" class="text-white h-10 w-10"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-blue mb-4 font-montserrat">Material Eléctrico Industrial</h3>
+                        <p class="text-brand-gray mb-4">Breakers, contactores, centros de carga, conduit, accesorios y componentes eléctricos de grado industrial.</p>
+                        <div class="text-sm text-brand-blue font-semibold">Schneider | Crouse-Hinds</div>
+                    </div>
+
+                    <!-- Producto 5 - CAMBIADO -->
+                    <div class="brand-card bg-gray-50 rounded-xl p-8 text-center shadow-lg">
+                        <div class="inline-block p-5 bg-brand-blue rounded-full mb-5">
+                            <i data-lucide="activity" class="text-white h-10 w-10"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-blue mb-4 font-montserrat">Calidad de Energía</h3>
+                        <p class="text-brand-gray mb-4">Bancos de capacitores para corrección de factor de potencia y supresores de transientes para protección.</p>
+                        <div class="text-sm text-brand-blue font-semibold">Especialistas en calidad</div>
+                    </div>
+
+                    <!-- Producto 6 -->
+                    <div class="brand-card bg-gray-50 rounded-xl p-8 text-center shadow-lg">
+                        <div class="inline-block p-5 bg-brand-blue rounded-full mb-5">
+                            <i data-lucide="shield-check" class="text-white h-10 w-10"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-blue mb-4 font-montserrat">Protección y Seguridad</h3>
+                        <p class="text-brand-gray mb-4">Equipos de protección eléctrica, envolventes, iluminación y sistemas de seguridad industrial.</p>
+                        <div class="text-sm text-brand-blue font-semibold">Crouse-Hinds | Eaton</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Marcas Section -->
+        <section id="marcas" class="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center text-brand-blue mb-3 font-montserrat">Marcas que Distribuimos</h2>
+                <div class="w-24 h-1 bg-brand-orange mx-auto mb-4"></div>
+                <p class="text-center text-brand-gray text-lg mb-16 max-w-3xl mx-auto">Somos distribuidores autorizados de las marcas líderes en tecnología eléctrica industrial</p>
+                
+                <!-- SCHNEIDER ELECTRIC -->
+                <div class="max-w-6xl mx-auto mb-8">
+                    <div class="brand-card brand-logo-card bg-white rounded-xl p-8 shadow-lg cursor-pointer" onclick="toggleCollapsible('schneider')">
+                        <img src="images/Logo_Schneider.png" alt="Schneider Electric" class="brand-logo-img mb-4">
+                        <p class="text-sm text-brand-gray text-center mb-3">Líder mundial en automatización y gestión de energía</p>
+                        <button class="text-brand-orange font-semibold flex items-center gap-2 mx-auto">
+                            Ver Productos
+                            <i data-lucide="chevron-down" class="h-5 w-5"></i>
+                        </button>
+                    </div>
+                    <div id="schneider" class="collapsible-content bg-white rounded-b-xl px-8 pb-8 shadow-lg -mt-4 pt-6">
+                        <h4 class="font-bold text-brand-blue mb-4 text-lg">Línea de Productos Schneider Electric:</h4>
+                        <ul class="space-y-3">
+                            <li>
+                                <a href="https://www.se.com/cr/es/product-range/7249-centros-de-carga-qo/?parent-subcategory-id=6405#products" target="_blank" class="product-link">
+                                    <i data-lucide="external-link" class="h-4 w-4"></i>
+                                    <span>Centro de carga QO</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.se.com/cr/es/product-range/7229-interruptores-termomagn%C3%A9ticos-qo-qob/#products" target="_blank" class="product-link">
+                                    <i data-lucide="external-link" class="h-4 w-4"></i>
+                                    <span>Interruptores termomagnéticos QO / QOB</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.se.com/cr/es/product-range/62274-qo-breaker-dual/#products" target="_blank" class="product-link">
+                                    <i data-lucide="external-link" class="h-4 w-4"></i>
+                                    <span>QO Breaker Dual</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.se.com/cr/es/product-range/7241-interruptores-desconectadores-para-aire-acondicionado-qo/#products" target="_blank" class="product-link">
+                                    <i data-lucide="external-link" class="h-4 w-4"></i>
+                                    <span>Interruptores desconectadores para aire acondicionado QO</span>
+                                </a>
+                            </li>
+                            <li>
+                                <div class="product-link">
+                                    <i data-lucide="box" class="h-4 w-4"></i>
+                                    <span>Interruptor de seguridad pesado Square D</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- CROUSE-HINDS BY EATON -->
+                <div class="max-w-6xl mx-auto mb-8">
+                    <div class="brand-card brand-logo-card bg-white rounded-xl p-8 shadow-lg cursor-pointer" onclick="toggleCollapsible('crousehinds')">
+                        <img src="images/Logo_CrouseHinds.png" alt="Crouse-Hinds by Eaton" class="brand-logo-img mb-4">
+                        <p class="text-sm text-brand-gray text-center mb-3">Material eléctrico industrial de alta calidad para áreas peligrosas</p>
+                        <button class="text-brand-orange font-semibold flex items-center gap-2 mx-auto">
+                            Ver Productos
+                            <i data-lucide="chevron-down" class="h-5 w-5"></i>
+                        </button>
+                    </div>
+                    <div id="crousehinds" class="collapsible-content bg-white rounded-b-xl px-8 pb-8 shadow-lg -mt-4 pt-6">
+                        <h4 class="font-bold text-brand-blue mb-4 text-lg">Línea de Productos Crouse-Hinds:</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            <a href="https://www.eaton.com/us/en-us/products/conduit-cable-wire-management.html" target="_blank" class="product-link">
+                                <i data-lucide="external-link" class="h-4 w-4"></i>
+                                <span>Industrial Fittings</span>
+                            </a>
+                            <a href="https://www.eaton.com/us/en-us/products/conduit-cable-wire-management.html" target="_blank" class="product-link">
+                                <i data-lucide="external-link" class="h-4 w-4"></i>
+                                <span>Cable Glands</span>
+                            </a>
+                            <a href="https://www.eaton.com/us/en-us/products/conduit-cable-wire-management.html" target="_blank" class="product-link">
+                                <i data-lucide="external-link" class="h-4 w-4"></i>
+                                <span>Commercial Products</span>
+                            </a>
+                            <a href="https://www.eaton.com/us/en-us/products/low-voltage-power-distribution-control-systems.html" target="_blank" class="product-link">
+                                <i data-lucide="external-link" class="h-4 w-4"></i>
+                                <span>Power Distribution and Control (C&A)</span>
+                            </a>
+                            <a href="https://www.eaton.com/us/en-us/products/enclosures.html" target="_blank" class="product-link">
+                                <i data-lucide="external-link" class="h-4 w-4"></i>
+                                <span>Enclosures</span>
+                            </a>
+                            <a href="https://www.eaton.com/us/en-us/products/lighting-controls.html" target="_blank" class="product-link">
+                                <i data-lucide="external-link" class="h-4 w-4"></i>
+                                <span>Lighting</span>
+                            </a>
+                            <a href="https://www.eaton.com/us/en-us/products/wiring-devices-connectivity.html" target="_blank" class="product-link">
+                                <i data-lucide="external-link" class="h-4 w-4"></i>
+                                <span>Plugs & Receptacles</span>
+                            </a>
+                            <a href="https://www.eaton.com/us/en-us/products/safety-security-emergency-communications.html" target="_blank" class="product-link">
+                                <i data-lucide="external-link" class="h-4 w-4"></i>
+                                <span>Hazardous Area Communications</span>
+                            </a>
+                            <a href="https://www.eaton.com/us/en-us/products/process-safety-automation-measurement.html" target="_blank" class="product-link">
+                                <i data-lucide="external-link" class="h-4 w-4"></i>
+                                <span>Process Instrumentation & Protection (MTL)</span>
+                            </a>
+                            <a href="https://www.eaton.com/us/en-us/products/lighting-controls/airfield-lighting-and-control-systems.html" target="_blank" class="product-link">
+                                <i data-lucide="external-link" class="h-4 w-4"></i>
+                                <span>Airfield Lighting and Control Systems</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EDP UPS -->
+                <div class="max-w-6xl mx-auto mb-8">
+                    <div class="brand-card brand-logo-card bg-white rounded-xl p-8 shadow-lg cursor-pointer" onclick="toggleCollapsible('edp')">
+                        <img src="images/logo-v.webp" alt="EDP UPS" class="brand-logo-img mb-4">
+                        <p class="text-sm text-brand-gray text-center mb-3">Sistemas de respaldo de energía ininterrumpida</p>
+                        <button class="text-brand-orange font-semibold flex items-center gap-2 mx-auto">
+                            Ver Catálogos
+                            <i data-lucide="chevron-down" class="h-5 w-5"></i>
+                        </button>
+                    </div>
+                    <div id="edp" class="collapsible-content bg-white rounded-b-xl px-8 pb-8 shadow-lg -mt-4 pt-6">
+                        <h4 class="font-bold text-brand-blue mb-2 text-lg">UPS Online de Alta Frecuencia - Serie PT</h4>
+                        <p class="text-brand-gray mb-6 text-sm">Tecnología avanzada con control digital, 99% de eficiencia y protección total contra perturbaciones eléctricas</p>
+                        
+                        <!-- Grid de Productos -->
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                            <!-- Producto 1kVA -->
+                            <div class="bg-gradient-to-br from-gray-50 to-white rounded-lg p-6 border-2 border-gray-200 hover:border-brand-orange transition-all duration-300 hover:shadow-lg">
+                                <div class="text-center mb-4">
+                                    <div class="inline-block p-3 bg-brand-blue rounded-full mb-3">
+                                        <i data-lucide="zap" class="text-white h-8 w-8"></i>
+                                    </div>
+                                    <h5 class="text-xl font-bold text-brand-blue mb-2">UPS 1kVA</h5>
+                                    <div class="inline-block bg-brand-orange text-white text-xs font-semibold px-3 py-1 rounded-full mb-3">IDEAL POS/CCTV</div>
+                                </div>
+                                <ul class="space-y-2 text-sm text-brand-gray mb-4">
+                                    <li class="flex items-center gap-2">
+                                        <i data-lucide="check" class="h-4 w-4 text-brand-orange"></i>
+                                        <span><strong>Potencia:</strong> 1kW</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <i data-lucide="check" class="h-4 w-4 text-brand-orange"></i>
+                                        <span><strong>Formato:</strong> Torre/Rack</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <i data-lucide="check" class="h-4 w-4 text-brand-orange"></i>
+                                        <span><strong>Eficiencia:</strong> 99%</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <i data-lucide="check" class="h-4 w-4 text-brand-orange"></i>
+                                        <span><strong>Baterías:</strong> 2x 12V/9Ah</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <i data-lucide="check" class="h-4 w-4 text-brand-orange"></i>
+                                        <span>Respaldo prolongado disponible</span>
+                                    </li>
+                                </ul>
+                                <a href="Catalogos/BROCHURE EDP 1-3kVA ESPAÑOL PARA IMPRIMIR.pdf" target="_blank" class="block text-center bg-brand-blue text-white py-2 px-4 rounded-lg text-sm font-semibold hover:bg-opacity-90 transition">
+                                    <i data-lucide="file-text" class="inline h-4 w-4 mr-1"></i>
+                                    Ver Catálogo
+                                </a>
+                            </div>
+
+                            <!-- Producto 2kVA -->
+                            <div class="bg-gradient-to-br from-gray-50 to-white rounded-lg p-6 border-2 border-brand-orange hover:border-brand-blue transition-all duration-300 hover:shadow-lg relative">
+                                <div class="absolute top-2 right-2 bg-brand-orange text-white text-xs font-bold px-2 py-1 rounded">MÁS VENDIDO</div>
+                                <div class="text-center mb-4">
+                                    <div class="inline-block p-3 bg-brand-orange rounded-full mb-3">
+                                        <i data-lucide="zap" class="text-white h-8 w-8"></i>
+                                    </div>
+                                    <h5 class="text-xl font-bold text-brand-blue mb-2">UPS 2kVA</h5>
+                                    <div class="inline-block bg-brand-blue text-white text-xs font-semibold px-3 py-1 rounded-full mb-3">IDEAL SERVIDORES</div>
+                                </div>
+                                <ul class="space-y-2 text-sm text-brand-gray mb-4">
+                                    <li class="flex items-center gap-2">
+                                        <i data-lucide="check" class="h-4 w-4 text-brand-orange"></i>
+                                        <span><strong>Potencia:</strong> 2kW</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <i data-lucide="check" class="h-4 w-4 text-brand-orange"></i>
+                                        <span><strong>Formato:</strong> Torre/Rack</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <i data-lucide="check" class="h-4 w-4 text-brand-orange"></i>
+                                        <span><strong>Eficiencia:</strong> 99%</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <i data-lucide="check" class="h-4 w-4 text-brand-orange"></i>
+                                        <span><strong>Baterías:</strong> 4x 12V/7Ah</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <i data-lucide="check" class="h-4 w-4 text-brand-orange"></i>
+                                        <span>Respaldo prolongado disponible</span>
+                                    </li>
+                                </ul>
+                                <a href="Catalogos/BROCHURE EDP 1-3kVA ESPAÑOL PARA IMPRIMIR.pdf" target="_blank" class="block text-center bg-brand-orange text-white py-2 px-4 rounded-lg text-sm font-semibold hover:bg-opacity-90 transition">
+                                    <i data-lucide="file-text" class="inline h-4 w-4 mr-1"></i>
+                                    Ver Catálogo
+                                </a>
+                            </div>
+
+                            <!-- Producto 3kVA -->
+                            <div class="bg-gradient-to-br from-gray-50 to-white rounded-lg p-6 border-2 border-gray-200 hover:border-brand-orange transition-all duration-300 hover:shadow-lg">
+                                <div class="text-center mb-4">
+                                    <div class="inline-block p-3 bg-brand-blue rounded-full mb-3">
+                                        <i data-lucide="zap" class="text-white h-8 w-8"></i>
+                                    </div>
+                                    <h5 class="text-xl font-bold text-brand-blue mb-2">UPS 3kVA</h5>
+                                    <div class="inline-block bg-brand-orange text-white text-xs font-semibold px-3 py-1 rounded-full mb-3">ALTA CAPACIDAD</div>
+                                </div>
+                                <ul class="space-y-2 text-sm text-brand-gray mb-4">
+                                    <li class="flex items-center gap-2">
+                                        <i data-lucide="check" class="h-4 w-4 text-brand-orange"></i>
+                                        <span><strong>Potencia:</strong> 3kW</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <i data-lucide="check" class="h-4 w-4 text-brand-orange"></i>
+                                        <span><strong>Formato:</strong> Torre/Rack</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <i data-lucide="check" class="h-4 w-4 text-brand-orange"></i>
+                                        <span><strong>Eficiencia:</strong> 99%</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <i data-lucide="check" class="h-4 w-4 text-brand-orange"></i>
+                                        <span><strong>Baterías:</strong> 6x 12V/7Ah</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <i data-lucide="check" class="h-4 w-4 text-brand-orange"></i>
+                                        <span>Respaldo prolongado disponible</span>
+                                    </li>
+                                </ul>
+                                <a href="Catalogos/BROCHURE EDP 1-3kVA ESPAÑOL PARA IMPRIMIR.pdf" target="_blank" class="block text-center bg-brand-blue text-white py-2 px-4 rounded-lg text-sm font-semibold hover:bg-opacity-90 transition">
+                                    <i data-lucide="file-text" class="inline h-4 w-4 mr-1"></i>
+                                    Ver Catálogo
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Características Generales -->
+                        <div class="bg-gradient-to-r from-brand-blue to-blue-900 text-white rounded-lg p-6 mt-6">
+                            <h5 class="font-bold mb-4 text-center">✨ Características de la Serie PT</h5>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+                                <div class="text-center">
+                                    <i data-lucide="shield-check" class="h-8 w-8 mx-auto mb-2 text-brand-orange"></i>
+                                    <div class="font-semibold">Protección Total</div>
+                                    <div class="text-xs opacity-90">Contra 8 tipos de fallas</div>
+                                </div>
+                                <div class="text-center">
+                                    <i data-lucide="cpu" class="h-8 w-8 mx-auto mb-2 text-brand-orange"></i>
+                                    <div class="font-semibold">Control Digital</div>
+                                    <div class="text-xs opacity-90">Alta estabilidad</div>
+                                </div>
+                                <div class="text-center">
+                                    <i data-lucide="battery-charging" class="h-8 w-8 mx-auto mb-2 text-brand-orange"></i>
+                                    <div class="font-semibold">Hasta 15 Bancos</div>
+                                    <div class="text-xs opacity-90">Respaldo extendido</div>
+                                </div>
+                                <div class="text-center">
+                                    <i data-lucide="monitor" class="h-8 w-8 mx-auto mb-2 text-brand-orange"></i>
+                                    <div class="font-semibold">Monitoreo</div>
+                                    <div class="text-xs opacity-90">USB, RS232, SNMP</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CTA Final -->
+                        <div class="text-center mt-6">
+                            <p class="text-brand-gray mb-3">¿Necesitas asesoría para elegir el modelo correcto?</p>
+                            <a href="#contacto" class="inline-block bg-brand-orange text-white font-semibold py-3 px-8 rounded-lg hover:bg-opacity-90 transition">
+                                Solicitar Cotización
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SIEMENS -->
+                <div class="max-w-6xl mx-auto mb-8">
+                    <div class="brand-card brand-logo-card bg-white rounded-xl p-8 shadow-lg cursor-pointer" onclick="toggleCollapsible('siemens')">
+                        <img src="images/Logo_Siemens.png" alt="Siemens" class="brand-logo-img mb-4">
+                        <p class="text-sm text-brand-gray text-center mb-3">Líder en soluciones de energía y automatización</p>
+                        <button class="text-brand-orange font-semibold flex items-center gap-2 mx-auto">
+                            Ver Productos
+                            <i data-lucide="chevron-down" class="h-5 w-5"></i>
+                        </button>
+                    </div>
+                    <div id="siemens" class="collapsible-content bg-white rounded-b-xl px-8 pb-8 shadow-lg -mt-4 pt-6">
+                        <h4 class="font-bold text-brand-blue mb-4 text-lg">Línea de Productos Siemens:</h4>
+                        <ul class="space-y-3">
+                            <li>
+                                <a href="Catalogos/capacitores epcos-siemens.pdf" target="_blank" class="product-link">
+                                    <i data-lucide="file-text" class="h-4 w-4"></i>
+                                    <span>Capacitores para Corrección de Factor de Potencia (Ver catálogo PDF)</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- EATON TRANSFORMADORES -->
+                <div class="max-w-6xl mx-auto mb-8">
+                    <div class="brand-card brand-logo-card bg-white rounded-xl p-8 shadow-lg cursor-pointer" onclick="toggleCollapsible('eaton')">
+                        <img src="images/Logo_Eaton.png" alt="Eaton" class="brand-logo-img mb-4">
+                        <p class="text-sm text-brand-gray text-center mb-3">Soluciones en gestión de energía y transformadores</p>
+                        <button class="text-brand-orange font-semibold flex items-center gap-2 mx-auto">
+                            Ver Productos
+                            <i data-lucide="chevron-down" class="h-5 w-5"></i>
+                        </button>
+                    </div>
+                    <div id="eaton" class="collapsible-content bg-white rounded-b-xl px-8 pb-8 shadow-lg -mt-4 pt-6">
+                        <h4 class="font-bold text-brand-blue mb-4 text-lg">Línea de Productos Eaton:</h4>
+                        <ul class="space-y-3">
+                            <li>
+                                <a href="Catalogos/Transformadores Pad-mounted.pdf" target="_blank" class="product-link">
+                                    <i data-lucide="file-text" class="h-4 w-4"></i>
+                                    <span>Transformadores Pad-mounted (Ver catálogo PDF)</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <p class="text-brand-gray text-lg">¿Buscas una marca o producto específico? <a href="#contacto" class="text-brand-orange font-semibold hover:underline">Contáctanos</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="nosotros" class="py-20 bg-white">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://media.istockphoto.com/id/1345765714/photo/electrical-engineers-test-electrical-installations-and-wiring-on-protective-relays.jpg?s=612x612&w=0&k=20&c=DAHHn42b_tk-1KyP9p2c4GIFy98oIv5AaCJDEcKmY3o=" alt="Ingenieros eléctricos trabajando en tableros" class="rounded-xl shadow-2xl">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-4xl font-bold text-brand-blue mb-4 font-montserrat">Tu Socio en Material Eléctrico Industrial</h2>
+                    <div class="w-24 h-1 bg-brand-orange mb-6"></div>
+                    <p class="text-brand-gray mb-4 text-lg">Central Power Solutions S.A es una empresa especializada en la distribución de material eléctrico industrial de las marcas más reconocidas del mercado.</p>
+                    <p class="text-brand-gray mb-6 text-lg">Atendemos proyectos industriales, comerciales y de infraestructura, garantizando disponibilidad, calidad y asesoría técnica especializada.</p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="check-circle" class="text-brand-orange h-6 w-6"></i>
+                            <span class="text-brand-gray font-medium">Stock disponible</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="check-circle" class="text-brand-orange h-6 w-6"></i>
+                            <span class="text-brand-gray font-medium">Envíos rápidos</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="check-circle" class="text-brand-orange h-6 w-6"></i>
+                            <span class="text-brand-gray font-medium">Asesoría técnica</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="check-circle" class="text-brand-orange h-6 w-6"></i>
+                            <span class="text-brand-gray font-medium">Mejores precios</span>
+                        </div>
+                    </div>
+
+                    <a href="#contacto" class="inline-block bg-brand-orange text-white font-montserrat font-semibold py-3 px-8 rounded-lg hover:bg-opacity-90 transition duration-300">Solicita tu Cotización</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contacto" class="py-20 bg-dark-blue text-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-3 font-montserrat">Solicita tu Cotización</h2>
+                <div class="w-24 h-1 bg-brand-orange mx-auto mb-4"></div>
+                <p class="text-center text-gray-300 text-lg mb-12 max-w-2xl mx-auto">Déjanos tus datos y te contactaremos con la mejor propuesta para tu proyecto</p>
+                
+                <div class="max-w-2xl mx-auto">
+                    <form id="contact-form" class="bg-brand-blue p-8 md:p-10 rounded-xl shadow-2xl">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="name" class="block mb-2 text-sm font-medium">Nombre Completo *</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-gray-100 text-gray-800 rounded-lg border border-gray-300 focus:outline-none focus:border-brand-orange focus:ring-2 focus:ring-brand-orange">
+                            </div>
+                            <div>
+                                <label for="company" class="block mb-2 text-sm font-medium">Empresa *</label>
+                                <input type="text" id="company" name="company" required class="w-full px-4 py-3 bg-gray-100 text-gray-800 rounded-lg border border-gray-300 focus:outline-none focus:border-brand-orange focus:ring-2 focus:ring-brand-orange">
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="email" class="block mb-2 text-sm font-medium">Correo Electrónico *</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-gray-100 text-gray-800 rounded-lg border border-gray-300 focus:outline-none focus:border-brand-orange focus:ring-2 focus:ring-brand-orange">
+                            </div>
+                            <div>
+                                <label for="phone" class="block mb-2 text-sm font-medium">Teléfono</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 bg-gray-100 text-gray-800 rounded-lg border border-gray-300 focus:outline-none focus:border-brand-orange focus:ring-2 focus:ring-brand-orange">
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="product" class="block mb-2 text-sm font-medium">Producto de Interés</label>
+                            <select id="product" name="product" class="w-full px-4 py-3 bg-gray-100 text-gray-800 rounded-lg border border-gray-300 focus:outline-none focus:border-brand-orange focus:ring-2 focus:ring-brand-orange">
+                                <option value="">Selecciona una categoría</option>
+                                <option value="schneider">Schneider Electric (Centros de carga, breakers)</option>
+                                <option value="crousehinds">Crouse-Hinds (Conduit, cable glands, enclosures)</option>
+                                <option value="transformadores">Transformadores Pad-mounted</option>
+                                <option value="ups">Sistemas UPS (EDP, Eaton)</option>
+                                <option value="calidad">Calidad de energía (Capacitores, supresores)</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="message" class="block mb-2 text-sm font-medium">Mensaje / Descripción del Proyecto *</label>
+                            <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 bg-gray-100 text-gray-800 rounded-lg border border-gray-300 focus:outline-none focus:border-brand-orange focus:ring-2 focus:ring-brand-orange" placeholder="Cuéntanos sobre tu proyecto y qué productos necesitas..."></textarea>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" class="bg-brand-orange text-white font-montserrat font-bold py-4 px-10 rounded-lg hover:bg-opacity-90 transition duration-300 shadow-lg text-lg">Enviar Solicitud</button>
+                        </div>
+                    </form>
+                    <div id="form-message" class="mt-6 text-center hidden"></div>
+                </div>
+
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                    <div class="text-center">
+                        <i data-lucide="map-pin" class="text-brand-orange h-10 w-10 mx-auto mb-3"></i>
+                        <h4 class="font-semibold mb-2">Ubicación</h4>
+                        <p class="text-gray-300">Ciudad de Panamá, Panamá</p>
+                    </div>
+                    <div class="text-center">
+                        <i data-lucide="phone" class="text-brand-orange h-10 w-10 mx-auto mb-3"></i>
+                        <h4 class="font-semibold mb-2">Teléfono</h4>
+                        <p class="text-gray-300">+507 XXXX-XXXX</p>
+                    </div>
+                    <div class="text-center">
+                        <i data-lucide="mail" class="text-brand-orange h-10 w-10 mx-auto mb-3"></i>
+                        <h4 class="font-semibold mb-2">Email</h4>
+                        <p class="text-gray-300">info@centralpowersolutions.com</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-blue text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-6">
+                <div>
+                    <h4 class="font-bold font-montserrat text-lg mb-3">Central Power Solutions S.A</h4>
+                    <p class="text-gray-300 text-sm">Distribuidores de material eléctrico industrial de las mejores marcas del mercado.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold font-montserrat text-lg mb-3">Marcas</h4>
+                    <ul class="text-gray-300 text-sm space-y-1">
+                        <li>Schneider Electric</li>
+                        <li>Crouse-Hinds by Eaton</li>
+                        <li>EDP UPS</li>
+                        <li>Eaton</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold font-montserrat text-lg mb-3">Contacto</h4>
+                    <ul class="text-gray-300 text-sm space-y-1">
+                        <li>Ciudad de Panamá, Panamá</li>
+                        <li>info@centralpowersolutions.com</li>
+                        <li>+507 XXXX-XXXX</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-400 pt-6 text-center">
+                <p class="text-sm">&copy; 2025 Central Power Solutions S.A. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Collapsible sections
+        function toggleCollapsible(id) {
+            const element = document.getElementById(id);
+            element.classList.toggle('active');
+            lucide.createIcons();
+        }
+
+        // Contact form
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formMessage = document.getElementById('form-message');
+            formMessage.classList.remove('hidden');
+            formMessage.innerHTML = '<p class="text-green-400 font-semibold text-lg">¡Gracias! Hemos recibido tu solicitud. Te contactaremos pronto.</p>';
+            
+            this.reset();
+            
+            setTimeout(() => {
+                formMessage.classList.add('hidden');
+            }, 5000);
+        });
+    </script>
+
+</body>
+</html>

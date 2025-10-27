@@ -1,0 +1,16 @@
+CAMBIOS PARA EL SITIO WEB - Central Power Solutions
+====================================================
+
+CAMBIO 1: [Título descriptivo]
+- ¿Qué cambiar?: 
+- ¿Dónde está?: 
+- ¿Qué resultado quiero?: 
+- Archivos necesarios (si aplica):
+
+CAMBIO 2: [Título descriptivo]
+- ¿Qué cambiar?: 
+- ¿Dónde está?: 
+- ¿Qué resultado quiero?: 
+- Archivos necesarios (si aplica):
+
+... y así sucesivamente
